@@ -1,0 +1,74 @@
+{
+  "name": "live-salary",
+  "displayName": "Live Salary",
+  "description": "Do you need a motivation to work? Calculate your salary in real-time.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Live Salary Settings",
+      "properties": {
+        "liveSalary.hourlyRate": {
+          "type": "number",
+          "default": 25,
+          "description": "Hourly rate for calculating live salary."
+        },
+        "liveSalary.currency": {
+          "type": "string",
+          "default": "USD",
+          "description": "Currency symbol to display."
+        },
+        "liveSalary.currencyPosition": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ],
+          "default": "left",
+          "description": "Choose whether the currency symbol should appear to the left or right of the salary."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "liveSalary.startShift",
+        "title": "Live Salary: Start Shift"
+      },
+      {
+        "command": "liveSalary.startShiftWithOffset",
+        "title": "Live Salary: Start Shift with Time Worked"
+      },
+      {
+        "command": "liveSalary.endShift",
+        "title": "Live Salary: End Shift"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.93.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "@typescript-eslint/parser": "^8.3.0",
+    "eslint": "^9.9.1",
+    "typescript": "^5.5.4",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
