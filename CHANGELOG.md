@@ -2,6 +2,15 @@
 
 All notable changes to the "Live Salary" extension will be documented in this file.
 
+## [1.0.1] - 2024-09-24
+Initial release.
+
+### Added
+- Extension icon.
+
+### Changed
+- Extension description.
+
 ## [1.0.0] - 2024-09-24
 Initial release.
 

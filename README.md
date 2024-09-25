@@ -2,7 +2,7 @@
 
 Live Salary is a Visual Studio Code extension that shows your live-updating salary in the status bar, based on the time you’ve worked. This extension allows you to start and stop shifts, account for time already worked, and customize the hourly rate, currency, and currency placement.
 
-![image](./assets/salary-update.gif)
+![image](assets/salary-update.gif)
 
 # Features
 
